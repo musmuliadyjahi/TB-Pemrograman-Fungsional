@@ -18,7 +18,6 @@ MatrixA = []
 MatrixB = []
 MatrixC = []
 
-
 for i in range(len(ListA)):
     ListC = ListA[i]+ListB[i]
     MatrixA.append(ListC)
@@ -31,13 +30,10 @@ for i in range(len(ListA)):
 print(MatrixA)
 print(MatrixB)
 print(MatrixC)
-# tuppel info Dictionary
-
 
 def Convert(tupp, dic):
     dic = dict(tupp)
     return dic
-
 
 tups = [(ListA[0], ListB[0]), (ListA[1], ListB[1]),
         (ListA[2], ListB[2]), (ListA[3], ListB[3])]
