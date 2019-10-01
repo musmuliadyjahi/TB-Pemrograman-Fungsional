@@ -35,7 +35,19 @@ dictionary ={}
 print (Convert(tups,dictionary))
 
 #Nomor 3
+print()
+print("Nomor 3 : ")
+def asd(x):
+    for i in range(1, x+1):
+        q = i**2
+        w = i**3
+        e = i**4
+        my_tuple = (q,w,e)
+        su = q+w+e
+        print(i ," = ", my_tuple, " = ",su)
 
+nm = int(input("Masukkan angka : "))
+asd(nm)
 
 #Nomor 4
 print()
