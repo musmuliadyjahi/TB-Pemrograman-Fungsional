@@ -22,8 +22,11 @@ MatrixC = []
 for i in range(len(ListA)):
     ListC = ListA[i]+ListB[i]
     MatrixA.append(ListC)
-    MatrixB.append(ListC.capitalize())
     MatrixC.append(ListC.upper())
+
+for i in range(len(ListA)):
+    ListC = ListA[i].capitalize()+ListB[i].capitalize()
+    MatrixB.append(ListC)
 
 print(MatrixA)
 print(MatrixB)
