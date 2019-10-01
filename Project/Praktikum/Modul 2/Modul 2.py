@@ -11,25 +11,24 @@ while i < ln:
 # Nomor 2
 print()
 print("Nomor 2 : ")
-ListA = ['teknik', 'pemograman', 'muhammadiyah', 'malang']
+ListA = ['teknik', 'pemograman', 'muhammadiyah', 'Tahun']
 ListB = ['informatika', 'fungsional', 'malang', '2019']
+ListC = []
+MatrixA = []
+MatrixB = []
+MatrixC = []
 
-print("tupples")  # tuples
-print('{' + "'"+ListA[0]+ListB[0]+"'"+','+"'"+ListA[1]+ListB[1] +
-      "'"+','+"'"+ListA[2]+ListB[2]+"'"+','+"'"+ListA[3]+ListB[3]+'}')
 
-print("")
-print("cupitalize Directory")  # cupitalize Directory
-print('{' + "'" + ListA[0].capitalize() + ListB[0].capitalize() + "'"+','+"'"+ListA[1].capitalize() + ListB[1].capitalize() +
-      "'"+','+"'"+ListA[2].capitalize() + ListB[2].capitalize() + "'"+','+"'"+ListA[3].capitalize() + ListB[3].capitalize() + '}')
+for i in range(len(ListA)):
+    ListC = ListA[i]+ListB[i]
+    MatrixA.append(ListC)
+    MatrixB.append(ListC.capitalize())
+    MatrixC.append(ListC.upper())
 
-print("")
-print("Uppercase Dictionary")  # Uppercase Dictionary
-print('{' + "'"+ListA[0].upper() + ListB[0].upper() + "'"+','+"'"+ListA[1].upper() + ListB[1].upper() +
-      "'"+','+"'"+ListA[2].upper() + ListB[2].upper() + "'"+','+"'"+ListA[3].upper() + ListB[3].upper() + '}')
-
-print("")
-print("tupples info Dictionary")  # tuppel info Dictionary
+print(MatrixA)
+print(MatrixB)
+print(MatrixC)
+# tuppel info Dictionary
 
 
 def Convert(tupp, dic):
@@ -38,7 +37,7 @@ def Convert(tupp, dic):
 
 
 tups = [(ListA[0], ListB[0]), (ListA[1], ListB[1]),
-        (ListA[2], ListB[2]), (ListA[3], ListB[3]), ]
+        (ListA[2], ListB[2]), (ListA[3], ListB[3])]
 dictionary = {}
 print(Convert(tups, dictionary))
 
