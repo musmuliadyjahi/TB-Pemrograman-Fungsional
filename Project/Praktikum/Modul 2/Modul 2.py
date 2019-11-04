@@ -28,8 +28,8 @@ for i in range(len(ListA)):
     MatrixB.append(ListC)
 
 print(MatrixA)
-print(MatrixB)
-print(MatrixC)
+print(tuple(MatrixB))
+print(tuple(MatrixC))
 
 def Convert(tupp, dic):
     dic = dict(tupp)
