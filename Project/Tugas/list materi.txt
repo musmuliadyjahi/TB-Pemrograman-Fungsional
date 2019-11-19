@@ -1,0 +1,20 @@
+Modul 1 :
+# 1.  Fungsi Rekrusif
+# 3.  lambda 
+# 4.  High Order Function
+5.  Pure Function
+# 6.  functools
+Modul 2 :
+# 1.  List
+# 2.  Tupple
+# 3.  Dictonary
+# 4.  Map Function
+# 5.  Filter Function
+# 6.  Reduce Function
+# 7.  Range Function
+# 8.  Nested for
+Modul 3:
+# 1.  MENGGUNAKAN LIST / TUPPLE / DICTIONARY SEBAGAI STRUKTUR DATA
+Modul 4:
+# 1. First Class Function
+# 2. Closures 
