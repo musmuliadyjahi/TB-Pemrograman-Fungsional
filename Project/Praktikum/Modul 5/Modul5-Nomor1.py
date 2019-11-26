@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import string
 
 #Menyiapkan variabel
-alpha = string.ascii_lowercase #Isi variabel adalah alfabet dari extension string
-y = [83, 95, 91, 87, 70, 0, 85, 82, 100, 67, 73, 77, 0] #membuat list sesuai dengan modul
+alpha = string.ascii_uppercase #Isi variabel adalah alfabet dari extension string
+y = [83, 95, 91, 87, 70, 0, 85, 82, 200, 67, 73, 77, 0] #membuat list sesuai dengan modul
 Yrange = [10,20,30,40,50,60,70,80,90,100] #membuat range pada sumbu-Y sebesar 10
 label = y #isi list sama dengan y, untuk dijadikan label
 x = [] #list kosong untuk isi alfabet

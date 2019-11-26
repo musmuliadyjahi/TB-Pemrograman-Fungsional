@@ -17,7 +17,7 @@ for i in range(len(y)):
 
 plt.plot(x, y, linestyle='-.') #plot 1 dengan style -.
 plt.plot(x, y1, linestyle=':') #plot 2 dengan style :
-plt.plot(x, y2, linestyle='--') #plot 3 dengan style --
+plt.plot(x, y2, linestyle='') #plot 3 dengan style --
 plt.plot(x, y3, linestyle='-') #plot 4 dengan style garis
 plt.grid(True) #membuat garis pada kotak
 plt.show() #menampilkan tabel

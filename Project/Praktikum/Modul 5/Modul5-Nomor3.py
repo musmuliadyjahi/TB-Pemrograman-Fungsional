@@ -16,5 +16,5 @@ for i in range(len(y)):
 
 plt.scatter(x, y, s=100,  marker='^') #plot 1 dengan model titik segitiga
 plt.scatter(x, y1, s=150, marker='1') #plot 2 dengan model titik 'tiga garis'
-plt.scatter(x, y2, s=200, marker='p') #plot 3 dengan model titik segi-5
+plt.scatter(x, y2, s=200, marker='s') #plot 3 dengan model titik segi-5
 plt.show() #menampilkan tabel
