@@ -1,11 +1,11 @@
 import random, sys
 
 
-def enemyProfile(dmgRecived):
+def dofflaminggoProfile(dmgRecived):
     global enemyHP, enemyMP
     enemyHP -= dmgRecived
     enemyRemHP = enemyHP
-    dressrosa(heroHP, enemyRemHP, enemyMP, dmgRecived)
+    dofflaminggo(heroHP, enemyRemHP, enemyMP, dmgRecived)
     enemyMP -= dmgSend
     enemyRemMP = enemyMP
     enemyMP +=enemyMPR
@@ -13,9 +13,7 @@ def enemyProfile(dmgRecived):
     
     return enemyHP, enemyMP
 
-
-
-def dressrosa(heroHP, enemyHP, enemyMP, dmgRecived):
+def dofflaminggo(heroHP, enemyHP, enemyMP, dmgRecived):
     global dmgSend,enemyMPR,enemyHPR
     # global heroHP
     if heroHP > 0:
@@ -63,7 +61,7 @@ def luffy(heroHP, heroMP):
                     heroMP -= 20
                     heroDmg = 20
                     # send dmg to enemy profile
-                    enemyProfile(heroDmg)
+                    dofflaminggo(heroDmg)
                     if enemyHP == 0:
                         print("I win and my HP is", heroHP, "and my MP is", heroMP)
                         sys.exit(0)

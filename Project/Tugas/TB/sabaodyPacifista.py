@@ -1,6 +1,6 @@
 import random, sys
 
-def enemyProfile(dmgRecived):
+def pacifistaProfile(dmgRecived):
     global enemyHP, enemyMP, dodge
     if dodge == 0:
         dmgRecived = 0
@@ -11,12 +11,12 @@ def enemyProfile(dmgRecived):
         enemyHP -= dmgRecived
         dodge -= 1
     enemyRemHP = enemyHP
-    sabody(heroHP, enemyRemHP, enemyMP, dmgRecived)
+    pacifista(heroHP, enemyRemHP, enemyMP, dmgRecived)
     enemyMP -= dmgSend
     enemyRemMP = enemyMP
     return enemyHP, enemyMP
 
-def sabody(heroHP, enemyHP, enemyMP, dmgRecived):
+def pacifista(heroHP, enemyHP, enemyMP, dmgRecived):
     global dmgSend
     # global heroHP
     if heroHP > 0:
@@ -63,7 +63,7 @@ def luffy(heroHP, heroMP):
                     heroMP -= 10
                     heroDmg = 10
                     # send dmg to enemy profile
-                    enemyProfile(heroDmg)
+                    pacifistaProfile(heroDmg)
                     if enemyHP == 0:
                         print("I win and my HP is", heroHP, "and my MP is", heroMP)
                         sys.exit(0)

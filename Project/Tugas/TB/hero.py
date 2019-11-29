@@ -1,60 +1,4 @@
-import random
 import sys
-
-
-def enemyProfile(dmgRecived):
-    global enemyHP, enemyMP, dodge  # deklarasi agar bisa dipakai global
-    if dodge == 0:
-        dmgRecived = 0
-        enemyHP -= dmgRecived
-        print("Dodge")
-        dodge = 3
-    elif dodge > 0:
-        enemyHP -= dmgRecived  # mengurangi darah musuh
-        dodge -= 1
-    enemyRemHP = enemyHP  # mendeklarasi darah musuh ke lokal
-    # memanggil method musuh untuk mengaktifkan skill
-    alabasta(enemyRemHP, enemyMP)
-    enemyMP -= dmgSend  # mengurangi MP musuh
-    enemyRemMP = enemyMP  # mendeklarasi MP musuh ke lokal
-    return enemyHP, enemyMP  # mengembalikan sisa HP & MP musuh
-
-
-def alabasta(enemyHP, enemyMP):
-    global dmgSend
-    if enemyHP > 0:
-        if enemyMP > 0:
-            MPs = random.randint(1, 3)
-            if MPs == 1:
-                if enemyMP >= 10:
-                    print("enemy attack with 10 MP")
-                    dmgSend = 10
-                    print("Enemy", enemyHP, enemyMP)
-                else:
-                    print("enemy Failed attack because low MP")
-                    dmgSend = 0
-            elif MPs == 2:
-                if enemyMP >= 20:
-                    print("enemy Attack with 20 MP")
-                    dmgSend = 20
-                    print("Enemy", enemyHP, enemyMP)
-                else:
-                    print("enemy Failed attack because low MP")
-                    dmgSend = 0
-            elif MPs == 3:
-                if enemyMP >= 30:
-                    print("enemy Attack with 30 MP")
-                    dmgSend = 30
-                    print("Enemy", enemyHP, enemyMP)
-                else:
-                    print("enemy Failed attack because low MP")
-                    dmgSend = 0
-        else:
-            print("Enemy out of MP, can't fight anymore")
-            enemyHP -= enemyHP
-    else:
-        print("Enemy Lose")
-    return dmgSend, enemyMP
 
 
 def luffy(heroHP, heroMP):
@@ -78,7 +22,7 @@ def luffy(heroHP, heroMP):
                         heroHP -= dmgSend  # mengurangi darah hero
                         if heroHP < 0:
                             print("minus")
-                            heroHP -= heroHP #anti minus HP
+                            heroHP -= heroHP  # anti minus HP
                         print("hero", heroHP, heroMP)  # print status hero
                         # memanggil method hero kembali dengan
                         # status yang sudah di perbaharui
@@ -99,7 +43,7 @@ def luffy(heroHP, heroMP):
                         heroHP -= dmgSend  # mengurangi darah hero
                         if heroHP < 0:
                             print("minus")
-                            heroHP -= heroHP #anti minus HP
+                            heroHP -= heroHP  # anti minus HP
                         print("hero", heroHP, heroMP)  # print status hero
                         # memanggil method hero kembali dengan
                         # status yang sudah di perbaharui
@@ -117,10 +61,6 @@ def luffy(heroHP, heroMP):
 global dmgSend, heroDmg, dodge
 heroDmg = dmgSend = 0
 dodge = 3
-
-# enemy Profile
-global enemyHP, enemyMP
-enemyHP = enemyMP = 100
 
 # hero Profile
 global heroHP, heroMP
