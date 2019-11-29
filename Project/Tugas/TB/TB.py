@@ -59,7 +59,7 @@ def alabasta(enemyHP, enemyMP):
 
 def luffy(heroHP, heroMP):
     global heroDmg  # deklarasi global
-    print("1. Skill \n")
+    print("1. Skill")
     print("2. Basic")
     if heroHP > 0:
         if heroMP > 0:

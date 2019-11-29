@@ -1,0 +1,99 @@
+import random, sys
+
+def enemyProfile(dmgRecived):
+    global enemyHP, enemyMP, dodge
+    if dodge == 0:
+        dmgRecived = 0
+        enemyHP -= dmgRecived
+        print("Evade")
+        dodge = 3
+    elif dodge > 0 :
+        enemyHP -= dmgRecived
+        dodge -= 1
+    enemyRemHP = enemyHP
+    sabody(heroHP, enemyRemHP, enemyMP, dmgRecived)
+    enemyMP -= dmgSend
+    enemyRemMP = enemyMP
+    return enemyHP, enemyMP
+
+def sabody(heroHP, enemyHP, enemyMP, dmgRecived):
+    global dmgSend
+    # global heroHP
+    if heroHP > 0:
+        if enemyHP > 0:
+            if enemyMP > 0:
+                MPs =random.randint(1, 5)
+                if MPs == 1:
+                    if enemyMP >= 10:
+                        print("Pacifista attack with Basic Attack")
+                        dmgSend = 10
+                        print("Enemy", enemyHP, enemyMP)
+                elif MPs == 2:
+                    if enemyMP >= 15:
+                        print("Pacifista attack with Laser Beam")
+                        dmgSend = 15
+                        print("Enemy", enemyHP, enemyMP)
+                elif MPs == 3:
+                    if enemyMP >= 20:
+                        print("Pacifista attack with Super Punch Steel")
+                        dmgSend = 20
+                        print("Enemy", enemyHP, enemyMP)
+                elif MPs == 4:
+                    if enemyMP >= 50:
+                        print("Pacifista attack with Special attack")
+                        dmgSend = 100
+                        print("Enemy", enemyHP, enemyMP)
+                    else:
+                        print("enemy Failed attack because MP is low")
+            else:
+                print("Enemy out of MP, can't fight anymore")
+                enemyHP -= enemyHP
+        else:
+            print("I Lose -Pacifista")
+    return dmgSend, enemyMP
+
+def luffy(heroHP, heroMP):
+    global heroDmg
+    if heroHP > 0:
+        if heroMP > 0:
+            MPs = 1 #random.randint(1, 5)
+            if MPs == 1:
+                if heroMP >= 10:
+                    print("hero attack with 10 MP")
+                    heroMP -= 10
+                    heroDmg = 10
+                    # send dmg to enemy profile
+                    enemyProfile(heroDmg)
+                    if enemyHP == 0:
+                        print("I win and my HP is", heroHP, "and my MP is", heroMP)
+                        sys.exit(0)
+                    elif heroHP > 0:
+                        heroHP -= dmgSend
+                        if heroHP <0:
+                            print ("minus")
+                            heroHP -= heroHP
+                        print("hero", heroHP, heroMP)
+                        luffy(heroHP, heroMP)
+                else:
+                    print("hero Failed attack because low MP")
+        else:
+            print("hero out of MP, can't fight anymore")
+            heroHP -= heroHP
+    else:
+        print("hero lose")
+
+
+#global profile
+global dmgSend, heroDmg, dodge
+heroDmg = dmgSend = 0
+dodge = 3
+
+# enemy Profile
+global enemyHP, enemyMP
+enemyHP = enemyMP = 100
+
+# hero Profile
+global heroHP, heroMP
+heroHP = heroMP = 100
+
+luffy(heroHP, heroMP)
