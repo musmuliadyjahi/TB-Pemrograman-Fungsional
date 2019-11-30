@@ -1,14 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-
 import random
 import time
-import os
 import sys
-from functools import partial
 
 
 def setup():
@@ -20,15 +12,6 @@ def setup():
 
     HP = 100
     MP = 100
-
-
-def status():
-
-    print("Sedang mengecek status " + name)
-    time.sleep(2)
-    print(name + " masih punya " +
-          " " + str(HP) + " " + "Total darah")
-
 
 def enemy2():
     global enemyHP
@@ -66,7 +49,8 @@ while enemyHP > 0:
             print("Giliran Musuhnya Menyerang Biasa " +
                   str(enemyhit) + " Kerusakan ")
         else:
-            A = input("pilih skill musuh : ")
+            # A = input("pilih skill musuh : ")
+            A = random.randint(1, 3)
             print("Musuh memilih Skill", A)
         if A == '1':
             enemyhitskill1 = 10
@@ -132,9 +116,3 @@ else:
 print("\nTotal HP kamu saat ini" + " " + str(HP))
 print("Total MP kamu saat ini" + " " + str(MP))
 print("\n")
-
-
-# In[ ]:
-
-
-# In[ ]:

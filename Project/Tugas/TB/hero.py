@@ -138,14 +138,15 @@ heroDmg = mpR = hpR = 0
 # hero Profile
 heroHP = heroMP = 1000
 
-print("Luffy 1")
-luffy(heroHP, heroMP)
+import alabasta
+print("Luffy 3")
+luffy3(heroHP, heroMP)
 heroHP = hpR
 heroMP = mpR
+import sabaodyKizaru
 print("Luffy 2")
 luffy2(heroHP, heroMP)
 heroHP = hpR
 heroMP = mpR
-print("Luffy 3")
-luffy3(heroHP, heroMP)
-import alabasta
+print("Luffy 1")
+luffy(heroHP, heroMP)
