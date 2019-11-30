@@ -3,7 +3,6 @@ import wholeCakeIsland as WCI
 import dressrosa as DS
 import sabaodyPacifista as sP
 
-
 def luffy(heroHP, heroMP):
     global heroDmg, hpR, mpR  # deklarasi global
     hpR = mpR = 0
@@ -133,12 +132,10 @@ def luffy3(heroHP, heroMP):
         print("hero lose")
 
 
-# global profile
-global heroDmg, hpR, mpR
+# global defnie
+global heroDmg, hpR, mpR, heroHP, heroMP
 heroDmg = mpR = hpR = 0
-
 # hero Profile
-global heroHP, heroMP
 heroHP = heroMP = 1000
 
 print("Luffy 1")
@@ -151,3 +148,4 @@ heroHP = hpR
 heroMP = mpR
 print("Luffy 3")
 luffy3(heroHP, heroMP)
+import alabasta

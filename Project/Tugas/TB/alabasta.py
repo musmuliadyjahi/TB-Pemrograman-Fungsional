@@ -1,12 +1,15 @@
-import random, time, sys
+import random
+import time
+import sys
 
 
-def setup(): #set profile hero
+def setup():  # set profile hero
     global name, HP, MP
 
     name = ("luffy")
     HP = random.randint(500, 501)
     MP = random.randint(30, 50)
+
 
 def enemy3():
     global enemyHP
@@ -23,7 +26,8 @@ def enemy3():
     print("\n" + enemyname3 + " mempunyai Skill:")
     print(" 1. Bomb = 10 Kerusakan\n 2. Laser = 20 Kerusakan \n 3. Thunder = 30 Kerusakan")
 
-#mulai
+
+# mulai
 setup()
 global name, HP, MP, enemyHP, enemyMP
 print("\nTotal HP" + " " + str(HP))
@@ -33,7 +37,7 @@ enemy3()
 while enemyHP > 0:
     A = random.choice([1, 2, 3])
     print("Musuh memilih Skill", A)
-#     enemy attack
+#   enemy attack
     if enemyMP < 5:
         enemyhit = 3
         enemyhitmp = 3
@@ -86,7 +90,7 @@ else:
     print("\nWah " + enemyname3 + " Hidup kembali, kamu harus melawannya lagi")
     time.sleep(2)
 
-#round 2
+# round 2
 print("\nTotal HP kamu saat ini" + " " + str(HP))
 print("Total MP kamu saat ini" + " " + str(MP))
 print("\n")
