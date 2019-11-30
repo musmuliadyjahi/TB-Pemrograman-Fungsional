@@ -1,28 +1,12 @@
-import random
-import time
-import os
-import sys
-from functools import partial
+import random, time, sys
 
 
-def setup():
-    global name
-    global HP
-    global MP
+def setup(): #set profile hero
+    global name, HP, MP
 
-    name = ("HERO")
-
-    HP = random.randint(1000, 1001)
+    name = ("luffy")
+    HP = random.randint(500, 501)
     MP = random.randint(30, 50)
-
-
-def status():
-
-    print("Sedang Mengecek Status si " + name)
-    time.sleep(2)
-    print("si "+name + " masih punya " +
-          " " + str(HP) + " " + "Total Darah")
-
 
 def enemy3():
     global enemyHP
@@ -32,27 +16,24 @@ def enemy3():
     enemyMP = random.randint(350, 450)
 
     enemyname3 = "Alabasta"
-    print(enemyname3 + "nya punya " + " " + str(enemyHP) + " " + "Total HP")
+    print(enemyname3 + "nya punya " + " " +
+          str(enemyHP) + " " + "Total HP")
     print(enemyname3 + "nya punya " + " " +
           str(enemyMP) + " " + "Total MP")
-    print("\nKala njengking mempunyai Skill:")
+    print("\n" + enemyname3 + " mempunyai Skill:")
     print(" 1. Bomb = 10 Kerusakan\n 2. Laser = 20 Kerusakan \n 3. Thunder = 30 Kerusakan")
 
-
+#mulai
 setup()
-global name
-global HP
-global MP
-global enemyHP
-global enemyMP
+global name, HP, MP, enemyHP, enemyMP
 print("\nTotal HP" + " " + str(HP))
 print("Total MP" + " " + str(MP))
-print("\n")
 enemy3()
 
-while enemyHP >= 0:
+while enemyHP > 0:
     A = random.choice([1, 2, 3])
     print("Musuh memilih Skill", A)
+#     enemy attack
     if enemyMP < 5:
         enemyhit = 3
         enemyhitmp = 3
@@ -81,7 +62,7 @@ while enemyHP >= 0:
               str(enemyhitskill3) + " Kerusakan ")
         HP = HP - enemyhitskill3
         enemyMP = enemyMP - enemyhitskill3mp
-
+#   hero attack
     print("Sisa Nyawa " + name + " " + str(HP)+"HP")
     time.sleep(2)
     if HP <= 0:
@@ -91,9 +72,12 @@ while enemyHP >= 0:
         time.sleep(2)
         sys.exit(0)
     else:
-        hit = 8
+        hit = 80
         print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
-        enemyHP = enemyHP - hit
+        if enemyHP < 0:
+            enemyHP -= enemyHP
+        else:
+            enemyHP = enemyHP - hit
         print("Sisa HP Alabasta = " + str(enemyHP) +
               " Dan MP Alabasta " + str(enemyMP))
         time.sleep(2)
@@ -101,12 +85,14 @@ else:
     time.sleep(2)
     print("\nWah " + enemyname3 + " Hidup kembali, kamu harus melawannya lagi")
     time.sleep(2)
+
+#round 2
 print("\nTotal HP kamu saat ini" + " " + str(HP))
 print("Total MP kamu saat ini" + " " + str(MP))
 print("\n")
 enemy3()
 
-while enemyHP >= 0:
+while enemyHP > 0:
     A = random.choice([1, 2, 3])
     print("Musuh memilih Skill", A)
     if enemyMP < 5:
@@ -147,9 +133,12 @@ while enemyHP >= 0:
         time.sleep(2)
         sys.exit(0)
     else:
-        hit = 8
+        hit = 80
         print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
-        enemyHP = enemyHP - hit
+        if enemyHP < 0:
+            enemyHP -= enemyHP
+        else:
+            enemyHP = enemyHP - hit
         print("Sisa HP Alabasta = " + str(enemyHP) +
               " Dan MP Alabasta " + str(enemyMP))
         time.sleep(2)
