@@ -18,13 +18,13 @@ def enemy3():
     enemyHP = 750
     enemyMP = 1000
 
-    enemyname3 = "Alabasta"
+    enemyname3 = "Crocodile"
     print(enemyname3 + "nya punya " + " " +
           str(enemyHP) + " " + "Total HP")
     print(enemyname3 + "nya punya " + " " +
           str(enemyMP) + " " + "Total MP")
     print("\n" + enemyname3 + " mempunyai Skill:")
-    print(" 1. Bomb = 10 Kerusakan\n 2. Laser = 20 Kerusakan \n 3. Thunder = 30 Kerusakan")
+    print(" 1. Bomb = 50 Kerusakan\n 2. Laser = 75 Kerusakan \n 3. Thunder = 100 Kerusakan")
 
 
 # mulai
@@ -35,37 +35,37 @@ print("Total MP" + " " + str(MP))
 enemy3()
 
 while enemyHP > 0:
-    A = random.choice([1, 2, 3])
+    A = random.choice(1,5)
     print("Musuh memilih Skill", A)
 #   enemy attack
-    if enemyMP < 5:
+    if A == 2:
+        enemyhitskill1 = 50
+        enemyhitskill1mp = 50
+        print("Giliran Musuhnya Menyerang Dengan Skill Bomb " +
+              str(enemyhitskill1) + " Kerusakan ")
+        HP = HP - enemyhitskill1
+        enemyMP = enemyMP - enemyhitskill1mp
+    elif A == 3:
+        enemyhitskill2 = 75
+        enemyhitskill2mp = 75
+        print("Giliran Musuhnya Menyerang Dengan Skill Laser " +
+              str(enemyhitskill2) + " Kerusakan ")
+        HP = HP - enemyhitskill2
+        enemyMP = enemyMP - enemyhitskill2mp
+    elif A == 4:
+        enemyhitskill3 = 100
+        enemyhitskill3mp = 100
+        print("Giliran Musuhnya Menyerang Dengan Skill Thunder " +
+              str(enemyhitskill3) + " Kerusakan ")
+        HP = HP - enemyhitskill3
+        enemyMP = enemyMP - enemyhitskill3mp
+    else:
         enemyhit = 3
         enemyhitmp = 3
         HP = HP - enemyhit
         enemyMP = enemyMP + enemyhitmp
         print("Giliran Musuhnya Menyerang Biasa " +
               str(enemyhit) + " Kerusakan ")
-    elif A < 2:
-        enemyhitskill1 = 10
-        enemyhitskill1mp = 5
-        print("Giliran Musuhnya Menyerang Dengan Skill Bomb " +
-              str(enemyhitskill1) + " Kerusakan ")
-        HP = HP - enemyhitskill1
-        enemyMP = enemyMP - enemyhitskill1mp
-    elif A < 3:
-        enemyhitskill2 = 20
-        enemyhitskill2mp = 10
-        print("Giliran Musuhnya Menyerang Dengan Skill Laser " +
-              str(enemyhitskill2) + " Kerusakan ")
-        HP = HP - enemyhitskill2
-        enemyMP = enemyMP - enemyhitskill2mp
-    elif A < 4:
-        enemyhitskill3 = 30
-        enemyhitskill3mp = 20
-        print("Giliran Musuhnya Menyerang Dengan Skill Thunder " +
-              str(enemyhitskill3) + " Kerusakan ")
-        HP = HP - enemyhitskill3
-        enemyMP = enemyMP - enemyhitskill3mp
 #   hero attack
     print("Sisa Nyawa " + name + " " + str(HP)+"HP")
     time.sleep(2)
@@ -81,6 +81,8 @@ while enemyHP > 0:
             hit = 80
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
+            if enemyHP < 0:
+                enemyHP -= enemyHP
             print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                   " Dan MP Admiral Kizaru " + str(enemyMP))
             time.sleep(2)
@@ -88,6 +90,8 @@ while enemyHP > 0:
             hit = 90
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
+            if enemyHP < 0:
+                enemyHP -= enemyHP
             print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                   " Dan MP Admiral Kizaru " + str(enemyMP))
             time.sleep(2)
@@ -95,6 +99,8 @@ while enemyHP > 0:
             hit = 100
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
+            if enemyHP < 0:
+                enemyHP -= enemyHP
             print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                   " Dan MP Admiral Kizaru " + str(enemyMP))
             time.sleep(2)
@@ -102,6 +108,8 @@ while enemyHP > 0:
             hit = 200
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
+            if enemyHP < 0:
+                enemyHP -= enemyHP
             print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                   " Dan MP Admiral Kizaru " + str(enemyMP))
             time.sleep(2)
@@ -119,37 +127,38 @@ enemy3()
 while enemyHP > 0:
     A = random.choice([1, 2, 3])
     print("Musuh memilih Skill", A)
-    if enemyMP < 5:
+    if A == 2:
+        enemyhitskill1 = 50
+        enemyhitskill1mp = 50
+        print("Giliran Musuhnya Menyerang Dengan Skill Bomb " +
+              str(enemyhitskill1) + " Kerusakan ")
+        HP = HP - enemyhitskill1
+        enemyMP = enemyMP - enemyhitskill1mp
+    elif A == 3:
+        enemyhitskill2 = 75
+        enemyhitskill2mp = 75
+        print("Giliran Musuhnya Menyerang Dengan Skill Laser " +
+              str(enemyhitskill2) + " Kerusakan ")
+        HP = HP - enemyhitskill2
+        enemyMP = enemyMP - enemyhitskill2mp
+    elif A == 4:
+        enemyhitskill3 = 100
+        enemyhitskill3mp = 100
+        print("Giliran Musuhnya Menyerang Dengan Skill Thunder " +
+              str(enemyhitskill3) + " Kerusakan ")
+        HP = HP - enemyhitskill3
+        enemyMP = enemyMP - enemyhitskill3mp
+    else:
         enemyhit = 3
         enemyhitmp = 3
         HP = HP - enemyhit
         enemyMP = enemyMP + enemyhitmp
         print("Giliran Musuhnya Menyerang Biasa " +
               str(enemyhit) + " Kerusakan ")
-    elif A < 2:
-        enemyhitskill1 = 10
-        enemyhitskill1mp = 5
-        print("Giliran Musuhnya Menyerang Dengan Skill Bomb " +
-              str(enemyhitskill1) + " Kerusakan ")
-        HP = HP - enemyhitskill1
-        enemyMP = enemyMP - enemyhitskill1mp
-    elif A < 3:
-        enemyhitskill2 = 20
-        enemyhitskill2mp = 10
-        print("Giliran Musuhnya Menyerang Dengan Skill Laser " +
-              str(enemyhitskill2) + " Kerusakan ")
-        HP = HP - enemyhitskill2
-        enemyMP = enemyMP - enemyhitskill2mp
-    elif A < 4:
-        enemyhitskill3 = 30
-        enemyhitskill3mp = 20
-        print("Giliran Musuhnya Menyerang Dengan Skill Thunder " +
-              str(enemyhitskill3) + " Kerusakan ")
-        HP = HP - enemyhitskill3
-        enemyMP = enemyMP - enemyhitskill3mp
 
     print("Sisa Nyawa " + name + " " + str(HP)+"HP")
     time.sleep(2)
+    Hits = random.randint(1, 4)
     if HP <= 0:
         print("\nKamu Mati silahkan kembali dengan kekuatan yang lebih kuat "+name+" Mati")
         time.sleep(2)
@@ -157,14 +166,41 @@ while enemyHP > 0:
         time.sleep(2)
         sys.exit(0)
     else:
-        hit = 80
-        print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
-        if enemyHP < 0:
-            enemyHP -= enemyHP
-        else:
+        if Hits == 1:
+            hit = 80
+            print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
-        print("Sisa HP Alabasta = " + str(enemyHP) +
-              " Dan MP Alabasta " + str(enemyMP))
-        time.sleep(2)
+            if enemyHP < 0:
+                enemyHP -= enemyHP
+            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
+                  " Dan MP Admiral Kizaru " + str(enemyMP))
+            time.sleep(2)
+        if Hits == 2:
+            hit = 90
+            print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
+            enemyHP = enemyHP - hit
+            if enemyHP < 0:
+                enemyHP -= enemyHP
+            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
+                  " Dan MP Admiral Kizaru " + str(enemyMP))
+            time.sleep(2)
+        if Hits == 3:
+            hit = 100
+            print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
+            enemyHP = enemyHP - hit
+            if enemyHP < 0:
+                enemyHP -= enemyHP
+            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
+                  " Dan MP Admiral Kizaru " + str(enemyMP))
+            time.sleep(2)
+        if Hits == 1:
+            hit = 200
+            print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
+            enemyHP = enemyHP - hit
+            if enemyHP < 0:
+                enemyHP -= enemyHP
+            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
+                  " Dan MP Admiral Kizaru " + str(enemyMP))
+            time.sleep(2)
 else:
     print("Wah " + enemyname3 + " sudah mati, silakan melanjutkan perjalanan")
