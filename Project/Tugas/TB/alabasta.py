@@ -68,13 +68,13 @@ while enemyHP > 0:
               str(enemyhit) + " Kerusakan ")
 #   hero attack
     print("Sisa Nyawa " + name + " " + str(HP)+"HP")
-    time.sleep(2)
+    time.sleep(5)
     Hits = random.randint(1, 4)
     if HP <= 0:
         print("\nKamu Mati silahkan kembali dengan kekuatan yang lebih kuat "+name+" Mati")
-        time.sleep(2)
+        time.sleep(5)
         print("Game Over")
-        time.sleep(2)
+        time.sleep(5)
         sys.exit(0)
     else:
         if Hits == 1:
@@ -83,40 +83,40 @@ while enemyHP > 0:
             enemyHP = enemyHP - hit
             if enemyHP < 0:
                 enemyHP -= enemyHP
-            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                  " Dan MP Admiral Kizaru " + str(enemyMP))
-            time.sleep(2)
+            print("Sisa HP  Crocodile = " + str(enemyHP) +
+                  " Dan MP  Crocodile " + str(enemyMP))
+            time.sleep(5)
         if Hits == 2:
             hit = 90
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
                 enemyHP -= enemyHP
-            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                  " Dan MP Admiral Kizaru " + str(enemyMP))
-            time.sleep(2)
+            print("Sisa HP  Crocodile = " + str(enemyHP) +
+                  " Dan MP  Crocodile " + str(enemyMP))
+            time.sleep(5)
         if Hits == 3:
             hit = 100
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
                 enemyHP -= enemyHP
-            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                  " Dan MP Admiral Kizaru " + str(enemyMP))
-            time.sleep(2)
+            print("Sisa HP  Crocodile = " + str(enemyHP) +
+                  " Dan MP  Crocodile " + str(enemyMP))
+            time.sleep(5)
         if Hits == 1:
             hit = 200
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
                 enemyHP -= enemyHP
-            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                  " Dan MP Admiral Kizaru " + str(enemyMP))
-            time.sleep(2)
+            print("Sisa HP  Crocodile = " + str(enemyHP) +
+                  " Dan MP  Crocodile " + str(enemyMP))
+            time.sleep(5)
 else:
-    time.sleep(2)
+    time.sleep(5)
     print("\nWah " + enemyname3 + " Hidup kembali, kamu harus melawannya lagi")
-    time.sleep(2)
+    time.sleep(5)
 
 # round 2
 print("\nTotal HP kamu saat ini" + " " + str(HP))
@@ -157,13 +157,13 @@ while enemyHP > 0:
               str(enemyhit) + " Kerusakan ")
 
     print("Sisa Nyawa " + name + " " + str(HP)+"HP")
-    time.sleep(2)
+    time.sleep(5)
     Hits = random.randint(1, 4)
     if HP <= 0:
         print("\nKamu Mati silahkan kembali dengan kekuatan yang lebih kuat "+name+" Mati")
-        time.sleep(2)
+        time.sleep(5)
         print("Game Over")
-        time.sleep(2)
+        time.sleep(5)
         sys.exit(0)
     else:
         if Hits == 1:
@@ -172,35 +172,35 @@ while enemyHP > 0:
             enemyHP = enemyHP - hit
             if enemyHP < 0:
                 enemyHP -= enemyHP
-            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                  " Dan MP Admiral Kizaru " + str(enemyMP))
-            time.sleep(2)
+            print("Sisa HP  Crocodile = " + str(enemyHP) +
+                  " Dan MP  Crocodile " + str(enemyMP))
+            time.sleep(5)
         if Hits == 2:
             hit = 90
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
                 enemyHP -= enemyHP
-            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                  " Dan MP Admiral Kizaru " + str(enemyMP))
-            time.sleep(2)
+            print("Sisa HP  Crocodile = " + str(enemyHP) +
+                  " Dan MP  Crocodile " + str(enemyMP))
+            time.sleep(5)
         if Hits == 3:
             hit = 100
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
                 enemyHP -= enemyHP
-            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                  " Dan MP Admiral Kizaru " + str(enemyMP))
-            time.sleep(2)
+            print("Sisa HP  Crocodile = " + str(enemyHP) +
+                  " Dan MP  Crocodile " + str(enemyMP))
+            time.sleep(5)
         if Hits == 1:
             hit = 200
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
                 enemyHP -= enemyHP
-            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                  " Dan MP Admiral Kizaru " + str(enemyMP))
-            time.sleep(2)
+            print("Sisa HP  Crocodile = " + str(enemyHP) +
+                  " Dan MP  Crocodile " + str(enemyMP))
+            time.sleep(5)
 else:
     print("Wah " + enemyname3 + " sudah mati, silakan melanjutkan perjalanan")

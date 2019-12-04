@@ -205,7 +205,7 @@ def bigMom(heroHP, heroMP):  # bigMOM
                               "and my MP is", heroMP)
                         hpR = heroHP
                         mpR = heroMP
-                        time.sleep(3)
+                        time.sleep(5)
                     elif heroHP > 0:
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
@@ -228,7 +228,7 @@ def bigMom(heroHP, heroMP):  # bigMOM
                               "and my MP is", heroMP)
                         hpR = heroHP
                         mpR = heroMP
-                        time.sleep(3)
+                        time.sleep(5)
                     elif heroHP > 0:
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
@@ -249,7 +249,7 @@ def bigMom(heroHP, heroMP):  # bigMOM
                                   "and my MP is", heroMP)
                             hpR = heroHP
                             mpR = heroMP
-                            time.sleep(3)
+                            time.sleep(5)
                         elif heroHP > 0:
                             heroHP -= WCI.dmgSend  # mengurangi darah hero
                             if heroHP < 0:
@@ -270,7 +270,7 @@ def bigMom(heroHP, heroMP):  # bigMOM
                                   "and my MP is", heroMP)
                             hpR = heroHP
                             mpR = heroMP
-                            time.sleep(3)
+                            time.sleep(5)
                         elif heroHP > 0:
                             heroHP -= WCI.dmgSend  # mengurangi darah hero
                             if heroHP < 0:
@@ -296,17 +296,44 @@ heroDmg = mpR = hpR = 0
 heroHP = heroMP = 1000
 pygame.mixer.init()
 pygame.mixer.music.load("KDA.mp3")
-pygame.mixer.music.play()
+# pygame.mixer.music.play()
 
-import alabasta
+print("Luffy beserta team pergi berlayar sebagai seorang bajak laut untuk menemukan one piece dan menjadi raja bajak laut.")
+time.sleep(8)
+print("Sampailah dia di sebuah negeri yang bernama alabasta, negeri itu sedang berada dalam masalah karna seseorang yang bernama crocodile menguasai negeri itu dari bayang-bayang. Untuk membebaskan negeri itu luffy pun melawannya.")
+time.sleep(10)
+
 print("Musuh : Crocodile")
-time.sleep(2)
+import alabasta
+time.sleep(5)
+print("Luffy pun dapat membebaskan negeri itu dan melanjutkan perjalanannya untuk mencari one piece.")
+time.sleep(10)
+print("Sampailah dia di negeri selanjutnya yaitu sambody. Di pulau itu dia mendapat masalah dari Admiral Kizaru dan Pacifista.")
+time.sleep(10)
 print("Musuh : Pacifista & kizaru")
-time.sleep(2)
+time.sleep(5)
 pacifista(heroHP, heroMP)
 import sabaodyKizaru
+print("Dia pun kalah telak tapi dia tidak menyerah hingga dia dilatih oleh seorang legenda hidup, salah satu dari kru bajak laut sebelumnya yaitu Reyleg.")
 pygame.mixer.music.stop()
-print("Luffy 2")
+time.sleep(10)
+print("Setelah dia selesai pembelajarannya dan melanjutkan perjalanannya, dia kembali berhadapan dengan masalah di pulau dresarosa, dia bertempur melawan Doflaminggo.")
 dofflaminggo(heroHP, heroMP)
-print("Luffy 1")
+print("Setelah itu,")
+time.sleep(10)
+print("dia pergi berlayar lagi namun dia di hadapi oleh sebuah pilihan yaitu mau ke wano atau menyelamatkan temannya di Whole Cake Island.")
+
+a = int(input("1.lanjut\n2.menyelamatkan teman"))
+if a  == 1 :
+    print("menuju wano dan luffy di cap tidak setia kawan")
+    print("Cerita berakhir")
+    sys.exit(0)
+else:
+    print("luffy pergi menyelamatkan temenya")
+
+
+print("Luffy berhasil menyelamatkan temannya namun Bigmom sang penguasa Whole Cake Island tidak mau melepaskannya diapun dikejar dan akhirnya terjadilah berhadap-hadapan.")
+time.sleep(10)
 bigMom(heroHP, heroMP)
+time.sleep(10)
+print("Akhirnya luffy pun berhasil menyelamatkan temannya dan mereka kembali berlayar menuju wano dan melanjutkan pencariannya menujur one piece.")

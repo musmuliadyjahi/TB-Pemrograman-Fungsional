@@ -80,12 +80,13 @@ while enemyHP > 0:
         time.sleep(2)
         Hits = random.randint(1, 4)
         if HP <= 0:
-            print(
-                "\nKamu Mati silahkan kembali dengan kekuatan yang lebih kuat "+name+" Mati")
-            time.sleep(2)
-            print("Game Over")
-            time.sleep(2)
-            sys.exit(0)
+            print("\nkarna kekuatan kizaru yang begitu kuat")
+            time.sleep(5)
+            print("\nluffy harus menerima kekalahan....")
+            time.sleep(3)
+            print("namun dia tidak menyerah dan akan kembali dengan tenaga yang lebih kuat")
+
+            time.sleep(8)
         else:
             if Hits == 1:
                 hit = 80
