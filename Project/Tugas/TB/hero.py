@@ -1,4 +1,4 @@
-import sys, time, random
+import sys, time, random, pygame
 import wholeCakeIsland as WCI
 import dressrosa as DS
 import sabaodyPacifista as sP
@@ -137,10 +137,14 @@ global heroDmg, hpR, mpR, heroHP, heroMP
 heroDmg = mpR = hpR = 0
 # hero Profile
 heroHP = heroMP = 1000
+pygame.mixer.init()
+pygame.mixer.music.load("KDA.mp3")
+pygame.mixer.music.play()
 
 import alabasta
 print("Luffy 3")
 luffy3(heroHP, heroMP)
+pygame.mixer.music.stop()
 heroHP = hpR
 heroMP = mpR
 import sabaodyKizaru
