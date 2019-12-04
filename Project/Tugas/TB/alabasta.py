@@ -7,16 +7,16 @@ def setup():  # set profile hero
     global name, HP, MP
 
     name = ("luffy")
-    HP = random.randint(500, 501)
-    MP = random.randint(30, 50)
+    HP = 1000
+    MP = 1000
 
 
 def enemy3():
     global enemyHP
     global enemyMP
     global enemyname3
-    enemyHP = random.randint(500, 600)
-    enemyMP = random.randint(350, 450)
+    enemyHP = 750
+    enemyMP = 1000
 
     enemyname3 = "Alabasta"
     print(enemyname3 + "nya punya " + " " +
@@ -69,6 +69,7 @@ while enemyHP > 0:
 #   hero attack
     print("Sisa Nyawa " + name + " " + str(HP)+"HP")
     time.sleep(2)
+    Hits = random.randint(1, 4)
     if HP <= 0:
         print("\nKamu Mati silahkan kembali dengan kekuatan yang lebih kuat "+name+" Mati")
         time.sleep(2)
@@ -76,15 +77,34 @@ while enemyHP > 0:
         time.sleep(2)
         sys.exit(0)
     else:
-        hit = 80
-        print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
-        if enemyHP < 0:
-            enemyHP -= enemyHP
-        else:
+        if Hits == 1:
+            hit = 80
+            print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
-        print("Sisa HP Alabasta = " + str(enemyHP) +
-              " Dan MP Alabasta " + str(enemyMP))
-        time.sleep(2)
+            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
+                  " Dan MP Admiral Kizaru " + str(enemyMP))
+            time.sleep(2)
+        if Hits == 2:
+            hit = 90
+            print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
+            enemyHP = enemyHP - hit
+            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
+                  " Dan MP Admiral Kizaru " + str(enemyMP))
+            time.sleep(2)
+        if Hits == 3:
+            hit = 100
+            print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
+            enemyHP = enemyHP - hit
+            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
+                  " Dan MP Admiral Kizaru " + str(enemyMP))
+            time.sleep(2)
+        if Hits == 1:
+            hit = 200
+            print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
+            enemyHP = enemyHP - hit
+            print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
+                  " Dan MP Admiral Kizaru " + str(enemyMP))
+            time.sleep(2)
 else:
     time.sleep(2)
     print("\nWah " + enemyname3 + " Hidup kembali, kamu harus melawannya lagi")
