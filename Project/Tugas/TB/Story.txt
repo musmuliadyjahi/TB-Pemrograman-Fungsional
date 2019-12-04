@@ -1,0 +1,11 @@
+print("Luffy beserta team pergi berlayar sebagai seorang bajak laut untuk menemukan one piece dan menjadi raja bajak laut.")
+
+print("Sampailah dia di sebuah negeri yang bernama alabasta, negeri itu sedang berada dalam masalah karna seseorang yang bernama crocodile menguasai negeri itu dari bayang-bayang. Untuk membebaskan negeri itu luffy pun melawannya. Luffy pun dapat membebaskan negeri itu dan melanjutkan perjalanannya untuk mencari one piece.")
+
+print("Sampailah dia di negeri selanjutnya yaitu sambody. Di pulau itu dia mendapat masalah dari Admiral Kizaru dan Pacifista. Dia pun kalah telak tapi dia tidak menyerah hingga dia dilatih oleh seorang legenda hidup, salah satu dari kru bajak laut sebelumnya yaitu Reyleg.")
+
+print("Setelah dia selesai pembelajarannya dan melanjutkan perjalanannya, dia kembali berhadapan dengan masalah di pulau dresarosa, dia bertempur melawan Doflaminggo. Setelah itu, dia pergi berlayar lagi namun dia di hadapi oleh sebuah pilihan yaitu mau ke wano atau menyelamatkan temannya di Whole Cake Island.")
+
+print("Luffy berhasil menyelamatkan temannya namun Bigmom sang penguasa Whole Cake Island tidak mau melepaskannya diapun dikejar dan akhirnya terjadilah berhadap-hadapan.")
+
+print("Akhirnya luffy pun berhasil menyelamatkan temannya dan mereka kembali berlayar menuju wano dan melanjutkan pencariannya menujur one piece.")
