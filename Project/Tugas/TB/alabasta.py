@@ -35,7 +35,7 @@ print("Total MP" + " " + str(MP))
 enemy3()
 
 while enemyHP > 0:
-    A = random.choice(1,5)
+    A = random.randint(1,5)
     print("Musuh memilih Skill", A)
 #   enemy attack
     if A == 2:
@@ -125,7 +125,7 @@ print("\n")
 enemy3()
 
 while enemyHP > 0:
-    A = random.choice([1, 2, 3])
+    A = random.randint(1,5)
     print("Musuh memilih Skill", A)
     if A == 2:
         enemyhitskill1 = 50
