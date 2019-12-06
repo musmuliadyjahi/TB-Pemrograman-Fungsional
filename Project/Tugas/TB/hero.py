@@ -5,7 +5,7 @@ import pygame
 import wholeCakeIsland as WCI
 import dressrosa as DS
 import sabaodyPacifista as sP
-
+from PIL import Image
 
 def pacifista(heroHP, heroMP):  # Pacifista
     global heroDmg
@@ -295,15 +295,23 @@ heroDmg = mpR = hpR = 0
 # hero Profile
 heroHP = heroMP = 1000
 pygame.mixer.init()
-pygame.mixer.music.load("KDA.mp3")
-# pygame.mixer.music.play()
+pygame.mixer.music.load("./Backsound/Luffy Berhasil.mp3")
 
+pygame.mixer.music.play()
 print("Luffy beserta team pergi berlayar sebagai seorang bajak laut untuk menemukan one piece dan menjadi raja bajak laut.")
 time.sleep(8)
-print("Sampailah dia di sebuah negeri yang bernama alabasta, negeri itu sedang berada dalam masalah karna seseorang yang bernama crocodile menguasai negeri itu dari bayang-bayang. Untuk membebaskan negeri itu luffy pun melawannya.")
+print("Sampailah dia di sebuah negeri yang bernama alabasta")
+time.sleep(5)
+pygame.mixer.music.stop()
+pygame.mixer.music.load("./Backsound/Luffy Fighting.mp3")
+pygame.mixer.music.play()
+print("negeri itu sedang berada dalam masalah karna seseorang yang bernama crocodile menguasai negeri itu dari bayang-bayang. Untuk membebaskan negeri itu luffy pun melawannya.")
 time.sleep(10)
 
 print("Musuh : Crocodile")
+img = Image.open("./Pict/Dofflaminggo.jpeg")
+img.show()
+time.sleep(5)
 import alabasta
 time.sleep(5)
 print("Luffy pun dapat membebaskan negeri itu dan melanjutkan perjalanannya untuk mencari one piece.")
@@ -315,7 +323,6 @@ time.sleep(5)
 pacifista(heroHP, heroMP)
 import sabaodyKizaru
 print("Dia pun kalah telak tapi dia tidak menyerah hingga dia dilatih oleh seorang legenda hidup, salah satu dari kru bajak laut sebelumnya yaitu Reyleg.")
-pygame.mixer.music.stop()
 time.sleep(10)
 print("Setelah dia selesai pembelajarannya dan melanjutkan perjalanannya, dia kembali berhadapan dengan masalah di pulau dresarosa, dia bertempur melawan Doflaminggo.")
 dofflaminggo(heroHP, heroMP)
