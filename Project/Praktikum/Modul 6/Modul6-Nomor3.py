@@ -6,7 +6,6 @@ from skimage import color
 img = io.imread(r'./Project/Praktikum/Modul 6/a.jpg')
 
 red = deepcopy(img)
-print(type(red))
 green = deepcopy(img)
 blue = deepcopy(img)
 grey = io.imread(r'./Project/Praktikum/Modul 6/a.jpg', as_gray=True)
