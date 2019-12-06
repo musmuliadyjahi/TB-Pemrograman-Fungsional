@@ -17,7 +17,7 @@ import argparse
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-m", "--model", type=str, default="knn",
+ap.add_argument("-m", "--model", type=str, default="random_forest",
 	help="type of python machine learning model to use")
 args = vars(ap.parse_args())
 
