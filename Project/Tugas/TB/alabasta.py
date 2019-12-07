@@ -1,8 +1,9 @@
 import random
 import time
 import sys
+import dmgBar as dB
 
-
+dmgCroco = []
 def setup():  # set profile hero
     global name, HP, MP
 
@@ -79,6 +80,7 @@ while enemyHP > 0:
     else:
         if Hits == 1:
             hit = 80
+            dmgCroco.append(hit)
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
@@ -88,6 +90,7 @@ while enemyHP > 0:
             time.sleep(5)
         if Hits == 2:
             hit = 90
+            dmgCroco.append(hit)
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
@@ -97,6 +100,7 @@ while enemyHP > 0:
             time.sleep(5)
         if Hits == 3:
             hit = 100
+            dmgCroco.append(hit)
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
@@ -106,6 +110,7 @@ while enemyHP > 0:
             time.sleep(5)
         if Hits == 1:
             hit = 200
+            dmgCroco.append(hit)
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
@@ -168,6 +173,7 @@ while enemyHP > 0:
     else:
         if Hits == 1:
             hit = 80
+            dmgCroco.append(hit)
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
@@ -177,6 +183,7 @@ while enemyHP > 0:
             time.sleep(5)
         if Hits == 2:
             hit = 90
+            dmgCroco.append(hit)
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
@@ -186,6 +193,7 @@ while enemyHP > 0:
             time.sleep(5)
         if Hits == 3:
             hit = 100
+            dmgCroco.append(hit)
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
@@ -195,6 +203,7 @@ while enemyHP > 0:
             time.sleep(5)
         if Hits == 1:
             hit = 200
+            dmgCroco.append(hit)
             print(name + " Menyerang Mengakibatkan " + str(hit) + " Kerusakan")
             enemyHP = enemyHP - hit
             if enemyHP < 0:
@@ -204,3 +213,5 @@ while enemyHP > 0:
             time.sleep(5)
 else:
     print("Wah " + enemyname3 + " sudah mati, silakan melanjutkan perjalanan")
+
+dB.crocodile(dmgCroco)
