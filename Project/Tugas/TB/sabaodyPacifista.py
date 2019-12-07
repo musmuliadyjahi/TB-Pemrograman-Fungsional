@@ -20,6 +20,8 @@ def pacifistaProfile(dmgRecived):
     else:
         print("Enemy out of MP, can't fight anymore")
         enemyHP -= enemyHP
+    if enemyHP <0 : #anti minus HP
+        enemyHP -= enemyHP
     print("Enemy", enemyHP, enemyMP)
     return enemyHP, enemyMP
 
