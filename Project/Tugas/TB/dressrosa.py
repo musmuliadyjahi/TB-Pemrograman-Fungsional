@@ -55,4 +55,4 @@ heroDmg = dmgSend = enemyMPR = enemyHPR = 0
 
 # enemy Profile
 global enemyHP, enemyMP
-enemyHP = enemyMP = 100
+enemyHP = enemyMP = 1000
