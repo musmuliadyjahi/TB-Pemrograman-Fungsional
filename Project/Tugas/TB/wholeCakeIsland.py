@@ -19,6 +19,8 @@ def bogMomProfile(dmgRecived):
         enemyRemMP = enemyMP  # mendeklarasi MP musuh ke lokal
     else:
         print("Enemy out of MP, can't fight anymore")
+        
+    if enemyHP<0:
         enemyHP -= enemyHP
     print("Enemy", enemyHP, enemyMP)
     return enemyHP, enemyMP  # mengembalikan sisa HP & MP musuh
@@ -61,4 +63,4 @@ def bigMom(enemyHP, enemyMP):
 global dodge, enemyHP, enemyMP, dmgSend
 dmgSend = 0
 dodge = 3
-enemyHP = enemyMP = 100
+enemyHP = enemyMP = 1000
