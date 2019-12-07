@@ -11,8 +11,6 @@ def one():
     time.sleep(8)
     print("Sampailah dia di sebuah negeri yang bernama alabasta")
     time.sleep(5) 
-
-def two():
     pygame.mixer.music.stop()
     pygame.mixer.music.load("./Backsound/Luffy Fighting.mp3")
     pygame.mixer.music.play()
@@ -23,7 +21,7 @@ def two():
     img.show()
     cv2.waitKey(0)
 
-def three():
+def two():
     time.sleep(5)
     print("Luffy pun dapat membebaskan negeri itu dan melanjutkan perjalanannya untuk mencari one piece.")
     time.sleep(10)
@@ -32,7 +30,7 @@ def three():
     print("Musuh : Pacifista & kizaru")
     time.sleep(5)
 
-def four():
+def three():
     print("Dia pun kalah telak tapi dia tidak menyerah hingga dia dilatih oleh seorang legenda hidup, salah satu dari kru bajak laut sebelumnya yaitu Reyleg.")
     time.sleep(10)
     print("Setelah dia selesai pembelajarannya dan melanjutkan perjalanannya")
@@ -40,17 +38,17 @@ def four():
     print("dia kembali berhadapan dengan masalah di pulau dresarosa, dia bertempur melawan Doflaminggo.")
     time.sleep(6)
 
-def five():
+def four():
     print("Setelah itu,")
     time.sleep(5)
     print("dia pergi berlayar lagi namun dia di hadapi oleh sebuah pilihan yaitu mau ke wano atau menyelamatkan temannya di Whole Cake Island.")
 
-def six():
+def five():
     print("Luffy berhasil menyelamatkan temannya.")
     time.sleep(5)
     print("Namun Bigmom sang penguasa Whole Cake Island tidak mau melepaskannya diapun dikejar dan akhirnya terjadilah berhadap-hadapan.")
     time.sleep(10)
 
-def seven():
+def six():
     time.sleep(10)
     print("Akhirnya luffy pun berhasil menyelamatkan temannya dan mereka kembali berlayar menuju wano dan melanjutkan pencariannya menujur one piece.")
