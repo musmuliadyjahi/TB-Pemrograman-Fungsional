@@ -60,4 +60,4 @@ dodge = 3
 
 # enemy Profile
 global enemyHP, enemyMP
-enemyHP = enemyMP = 100
+enemyHP = enemyMP = 1000
