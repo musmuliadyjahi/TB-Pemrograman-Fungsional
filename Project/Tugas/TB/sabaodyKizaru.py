@@ -96,6 +96,8 @@ while enemyHP > 0:
                         str(hit) + " Kerusakan")
                     enemyHP -= hit
                     print("hero" , HP,  MP)
+                    if enemyHP < 0:
+                        enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                         " Dan MP Admiral Kizaru " + str(enemyMP))
                     # time.sleep(2)
@@ -108,6 +110,8 @@ while enemyHP > 0:
                         str(hit) + " Kerusakan")
                     enemyHP -= hit
                     print("hero" , HP,  MP)
+                    if enemyHP < 0:
+                        enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                         " Dan MP Admiral Kizaru " + str(enemyMP))
                     # time.sleep(2)
@@ -120,6 +124,8 @@ while enemyHP > 0:
                         str(hit) + " Kerusakan")
                     enemyHP -=  hit
                     print("hero" , HP,  MP)
+                    if enemyHP < 0:
+                        enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                         " Dan MP Admiral Kizaru " + str(enemyMP))
                     # time.sleep(2)
@@ -132,6 +138,8 @@ while enemyHP > 0:
                         str(hit) + " Kerusakan")
                     enemyHP -= hit
                     print("hero" , HP,  MP)
+                    if enemyHP < 0:
+                        enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                         " Dan MP Admiral Kizaru " + str(enemyMP))
                     # time.sleep(2)
@@ -144,6 +152,8 @@ while enemyHP > 0:
                         str(hit) + " Kerusakan")
                     enemyHP -=  hit
                     print("hero" , HP,  MP)
+                    if enemyHP < 0:
+                        enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                         " Dan MP Admiral Kizaru " + str(enemyMP))
                     # time.sleep(2)
@@ -156,6 +166,8 @@ while enemyHP > 0:
                         str(hit) + " Kerusakan")
                     enemyHP -= hit
                     print("hero" , HP,  MP)
+                    if enemyHP < 0:
+                        enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                         " Dan MP Admiral Kizaru " + str(enemyMP))
                     # time.sleep(2)
@@ -168,6 +180,8 @@ while enemyHP > 0:
                         str(hit) + " Kerusakan")
                     enemyHP -=  hit
                     print("hero" , HP,  MP)
+                    if enemyHP < 0:
+                        enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                         " Dan MP Admiral Kizaru " + str(enemyMP))
                     # time.sleep(2)
@@ -180,6 +194,8 @@ while enemyHP > 0:
                         str(hit) + " Kerusakan")
                     enemyHP -= hit
                     print("hero" , HP,  MP)
+                    if enemyHP < 0:
+                        enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
                         " Dan MP Admiral Kizaru " + str(enemyMP))
                     # time.sleep(2)
@@ -194,7 +210,7 @@ while enemyHP > 0:
                       str(enemyhitskill1) + " Kerusakan ")
                 HP -= enemyhitskill1
                 enemyMP -= enemyhitskill1mp
-                enemyHP -= 5
+                enemyHP += 5
                 i += 1
         else:
             break
