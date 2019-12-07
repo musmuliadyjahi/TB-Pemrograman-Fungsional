@@ -11,11 +11,11 @@ import matplotlib.pyplot as plt
 
 
 # global defnie
-global heroDmg, heroHP, heroMP, dmgDoffy, dmgBigMom
+global heroDmg, heroHP, heroMP, dmgToDoffy, dmgToBigMom
 heroDmg = 0
-dmgDoffy = []
-dmgBigMom = []
-dmgPaci = []
+dmgToDoffy = []
+dmgToBigMom = []
+dmgToPaci = []
 # hero Profile
 heroHP = 1000
 heroMP = 1500
@@ -32,7 +32,7 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         print("hero attack with 80 MP")
                         heroMP -= 80
                         heroDmg = 80
-                        dmgPaci.append(heroDmg)
+                        dmgToPaci.append(heroDmg)
                         # send dmg to enemy profile
                         sP.pacifistaProfile(heroDmg)
                         heroHP -= sP.dmgSend
@@ -56,7 +56,7 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         print("hero attack with 90 MP")
                         heroMP -= 90
                         heroDmg = 90
-                        dmgPaci.append(heroDmg)
+                        dmgToPaci.append(heroDmg)
                         # send dmg to enemy profile
                         sP.pacifistaProfile(heroDmg)
                         heroHP -= sP.dmgSend
@@ -80,7 +80,7 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         print("hero attack with 100 MP")
                         heroMP -= 100
                         heroDmg = 100
-                        dmgPaci.append(heroDmg)
+                        dmgToPaci.append(heroDmg)
                         # send dmg to enemy profile
                         sP.pacifistaProfile(heroDmg)
                         heroHP -= sP.dmgSend
@@ -104,7 +104,7 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         print("hero attack with 200 MP")
                         heroMP -= 200
                         heroDmg = 200
-                        dmgPaci.append(heroDmg)
+                        dmgToPaci.append(heroDmg)
                         # send dmg to enemy profile
                         sP.pacifistaProfile(heroDmg)
                         heroHP -= sP.dmgSend
@@ -149,7 +149,7 @@ def dofflaminggo(heroHP, heroMP):  # Doflaminggo
                         print("hero attack with 80 MP")
                         heroMP -= 80
                         heroDmg = 80
-                        dmgDoffy.append(heroDmg)
+                        dmgToDoffy.append(heroDmg)
                         # send dmg to enemy profile
                         DS.dofflaminggoProfile(heroDmg)
                         heroHP -= DS.dmgSend
@@ -172,7 +172,7 @@ def dofflaminggo(heroHP, heroMP):  # Doflaminggo
                         print("hero attack with 90 MP")
                         heroMP -= 90
                         heroDmg = 90
-                        dmgDoffy.append(heroDmg)
+                        dmgToDoffy.append(heroDmg)
                         # send dmg to enemy profile
                         DS.dofflaminggoProfile(heroDmg)
                         heroHP -= DS.dmgSend
@@ -195,7 +195,7 @@ def dofflaminggo(heroHP, heroMP):  # Doflaminggo
                         print("hero attack with 100 MP")
                         heroMP -= 100
                         heroDmg = 100
-                        dmgDoffy.append(heroDmg)
+                        dmgToDoffy.append(heroDmg)
                         # send dmg to enemy profile
                         DS.dofflaminggoProfile(heroDmg)
                         heroHP -= DS.dmgSend
@@ -218,7 +218,7 @@ def dofflaminggo(heroHP, heroMP):  # Doflaminggo
                         print("hero attack with 200 MP")
                         heroMP -= 200
                         heroDmg = 200
-                        dmgDoffy.append(heroDmg)
+                        dmgToDoffy.append(heroDmg)
                         # send dmg to enemy profile
                         DS.dofflaminggoProfile(heroDmg)
                         heroHP -= DS.dmgSend
@@ -264,7 +264,7 @@ def bigMom(heroHP, heroMP):  # bigMOM
                         print("hero attack with 80 MP")
                         heroMP -= 80  # mengurangi MP hero
                         heroDmg = 80  # mendeklarasi dmg untuk musuh
-                        dmgBigMom.append(heroDmg)
+                        dmgToBigMom.append(heroDmg)
                         WCI.bogMomProfile(heroDmg)  # send dmg to enemy profile
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
@@ -288,7 +288,7 @@ def bigMom(heroHP, heroMP):  # bigMOM
                         print("hero attack with 90 MP")
                         heroMP -= 90  # mengurangi MP hero
                         heroDmg = 90  # mendeklarasi dmg untuk musuh
-                        dmgBigMom.append(heroDmg)
+                        dmgToBigMom.append(heroDmg)
                         WCI.bogMomProfile(heroDmg)  # send dmg to enemy profile
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
@@ -312,7 +312,7 @@ def bigMom(heroHP, heroMP):  # bigMOM
                         print("hero attack with 100 MP")
                         heroMP -= 100  # mengurangi MP hero
                         heroDmg = 100  # mendeklarasi dmg untuk musuh
-                        dmgBigMom.append(heroDmg)
+                        dmgToBigMom.append(heroDmg)
                         WCI.bogMomProfile(heroDmg)  # send dmg to enemy profile
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
@@ -336,7 +336,7 @@ def bigMom(heroHP, heroMP):  # bigMOM
                         print("hero attack with 200 MP")
                         heroMP -= 200  # mengurangi MP hero
                         heroDmg = 200  # mendeklarasi dmg untuk musuh
-                        dmgBigMom.append(heroDmg)
+                        dmgToBigMom.append(heroDmg)
                         WCI.bogMomProfile(heroDmg)  # send dmg to enemy profile
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
@@ -359,7 +359,7 @@ def bigMom(heroHP, heroMP):  # bigMOM
                     print("hero attack with basic attack and recover 20 MP")
                     heroMP += 20  # menambah MP hero
                     heroDmg = 10  # mendeklarasi dmg untuk musuh
-                    dmgBigMom.append(heroDmg)
+                    dmgToBigMom.append(heroDmg)
                     WCI.bogMomProfile(heroDmg)  # send dmg to enemy profile
                     if WCI.enemyHP <= 0:  # cek dara musuh, jika darah musuh 0 maka selesai
                         WCI.enemyHP -= WCI.enemyHP  # anti minus
@@ -391,13 +391,14 @@ SL.one()
 import alabasta
 SL.two()
 paci(heroHP, heroMP)
-dB.pacifista(dmgPaci)
+dB.pacifista(dmgToPaci)
 import sabaodyKizaru
 SL.three()
 doffy(heroHP, heroMP)
-dB.doffy(dmgDoffy)
+dB.doffy(dmgToDoffy)
 SL.four()
-a = int(input("1.lanjut\n2.menyelamatkan teman"))
+print("1.lanjut\n2.menyelamatkan teman")
+a = int(input("Jawabanmu : "))
 if a  == 1 :
     print("menuju wano dan luffy di cap tidak setia kawan")
     print("Cerita berakhir")
@@ -406,5 +407,5 @@ else:
     print("luffy pergi menyelamatkan temenya")
 SL.five()
 Mom(heroHP, heroMP)
-dB.bigMom(dmgBigMom)
+dB.bigMom(dmgToBigMom)
 SL.six()
