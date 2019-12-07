@@ -6,6 +6,9 @@ def doffy(dmgList):
         i += 1
         asd.append(i)
     plt.bar(asd, dmgList)
+    total = str(sum(dmgList))
+    li = str(dmgList)
+    plt.figtext(.02, .02, "Total dmg = " + total +"\n"+ li)
     plt.show()
 
 def bigMom(dmgList):
@@ -14,6 +17,9 @@ def bigMom(dmgList):
         i += 1
         asd.append(i)
     plt.bar(asd, dmgList)
+    total = str(sum(dmgList))
+    li = str(dmgList)
+    plt.figtext(.02, .02, "Total dmg = " + total +"\n"+ li)
     plt.show()
 
 def pacifista(dmgList):
@@ -22,4 +28,7 @@ def pacifista(dmgList):
         i += 1
         asd.append(i)
     plt.bar(asd, dmgList)
+    total = str(sum(dmgList))
+    li = str(dmgList)
+    plt.figtext(.02, .02, "Total dmg = " + total +"\n"+ li)
     plt.show()
