@@ -2,6 +2,8 @@ import random
 import time
 import sys
 import dmgBar as dB
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
 dmgCroco = []
 def setup():  # set profile hero
@@ -120,6 +122,11 @@ while enemyHP > 0:
             time.sleep(5)
 else:
     time.sleep(5)
+    plt.imshow(mpimg.imread("./Pict/crocodileRevive.jpg"))
+    plt.title("Crocodile")
+    plt.axis('off')
+    plt.show()
+    time.sleep(3)
     print("\nWah " + enemyname3 + " Hidup kembali, kamu harus melawannya lagi")
     time.sleep(5)
 
@@ -212,6 +219,10 @@ while enemyHP > 0:
                   " Dan MP  Crocodile " + str(enemyMP))
             time.sleep(5)
 else:
+    plt.imshow(mpimg.imread("./Pict/crocodileKalah.jpg"))
+    plt.axis('off')
+    plt.show()
+    time.sleep(5)
     print("Wah " + enemyname3 + " sudah mati, silakan melanjutkan perjalanan")
 
 dB.crocodile(dmgCroco)
