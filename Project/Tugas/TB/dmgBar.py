@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
+import time
 
 def doffy(dmgList):
     asd = []
     for i in range(len(dmgList)):
-        i += 1
-        asd.append(i)
+        a = ("Attack " + str(i+1))
+        asd.append(a)
+    plt.figure(num=None, figsize=(10,6))
     plt.bar(asd, dmgList)
     total = str(sum(dmgList))
     li = str(dmgList)
@@ -14,8 +16,9 @@ def doffy(dmgList):
 def bigMom(dmgList):
     asd = []
     for i in range(len(dmgList)):
-        i += 1
-        asd.append(i)
+        a = ("Attack " + str(i+1))
+        asd.append(a)
+    plt.figure(num=None, figsize=(10,6))
     plt.bar(asd, dmgList)
     total = str(sum(dmgList))
     li = str(dmgList)
@@ -25,8 +28,9 @@ def bigMom(dmgList):
 def pacifista(dmgList):
     asd = []
     for i in range(len(dmgList)):
-        i += 1
-        asd.append(i)
+        a = ("Attack " + str(i+1))
+        asd.append(a)
+    plt.figure(num=None, figsize=(10,6))
     plt.bar(asd, dmgList)
     total = str(sum(dmgList))
     li = str(dmgList)
@@ -36,8 +40,9 @@ def pacifista(dmgList):
 def crocodile(dmgList):
     asd = []
     for i in range(len(dmgList)):
-        i += 1
-        asd.append(i)
+        a = ("Attack " + str(i+1))
+        asd.append(a)
+    plt.figure(num=None, figsize=(10,6))
     plt.bar(asd, dmgList)
     total = str(sum(dmgList))
     li = str(dmgList)
@@ -47,8 +52,9 @@ def crocodile(dmgList):
 def kizaru(dmgList):
     asd = []
     for i in range(len(dmgList)):
-        i += 1
-        asd.append(i)
+        a = ("Attack " + str(i+1))
+        asd.append(a)
+    plt.figure(num=None, figsize=(10,6))
     plt.bar(asd, dmgList)
     total = str(sum(dmgList))
     li = str(dmgList)
