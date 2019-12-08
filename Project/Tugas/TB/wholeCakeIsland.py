@@ -6,7 +6,7 @@ def bogMomProfile(dmgRecived):
     if dodge == 0:
         dmgRecived = 0  # mengubah dmg yang diterima menjadi 0
         enemyHP -= dmgRecived
-        print("Dodge")
+        print("Enemy Dodge")
         dodge = 3
         time.sleep(3)
     elif dodge > 0:
