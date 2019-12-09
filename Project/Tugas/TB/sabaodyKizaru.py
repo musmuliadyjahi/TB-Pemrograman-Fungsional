@@ -7,9 +7,11 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 dmgKizaru = []
+
+
 def setup():
     global name, HP, MP
-    
+
     name = ("Luffy")
     MP = 1000
     HP = 1000
@@ -22,17 +24,16 @@ def enemy2():
     enemyMP = 1500
     enemyname2 = "Admiral Kizaru"
     time.sleep(3)
-    print(enemyname2 + "nya punya " + " " + 
-            str(enemyHP) + " " + "Total HP")
+    print(enemyname2 + "nya punya " + " " +
+          str(enemyHP) + " " + "Total HP")
     time.sleep(3)
     print(enemyname2 + "nya punya " + " " +
-            str(enemyMP) + " " + "Total MP")
+          str(enemyMP) + " " + "Total MP")
     time.sleep(3)
     print("\nAdmiral Kizaru mempunyai skill:")
     time.sleep(3)
-    print(" 1. Light Beam = 10 Kerusakan\n 2. Speed of Light = 20 Kerusakan \n 3. Haki = 30 Kerusakan")
+    print(" 1. Light Beam = 10 Kerusakan\n 2. Speed of Light = 20 Kerusakan \n 3. Haki = 30 Kerusakan \n 4. Keterangan")
     time.sleep(3)
-
 
 
 global name, HP, MP, enemyHP, enemyMP, enemyname2
@@ -46,6 +47,33 @@ print("Total MP" + " " + str(MP))
 time.sleep(3)
 enemy2()
 
+skill = [
+    {'nomor': '1', 'nama': 'Light Beam', 'kerusakan': 10},
+    {'nomor': '2', 'nama': 'Speed of Light', 'kerusakan': 20},
+    {'nomor': '3', 'nama': 'Haki', 'kerusakan': 30},
+]
+
+
+def kerusakan(skill, nomor):
+    Skill = skill
+    Nomor = nomor
+
+    def cetak():
+        for x in range(len(skill)):
+            # if value == True:
+            if Skill[x]['nomor'] == Nomor:
+                asd = Skill[x]['kerusakan']
+                print("Kerusakan :", asd)
+    return cetak
+
+
+def cari(skill, substring):
+    return skill['nomor'] in substring['nomor'] and skill['nama'] in substring['nama'] and skill['kerusakan'] in substring['kerusakan']
+
+
+def tampil(key, value):
+    if value == True:
+        print("Nomor skill :", key['nomor'])
 
 
 while enemyHP > 0:
@@ -59,15 +87,14 @@ while enemyHP > 0:
                   str(enemyhit) + " Kerusakan ")
             time.sleep(3)
         else:
-            # A = input("pilih skill musuh : ")
-            A = random.randint(1, 3)
+            A = input("pilih skill musuh : ")
             print("Musuh memilih Skill ", A)
             time.sleep(3)
             if A == 1:
                 enemyhitskill1 = 20
                 enemyhitskill1mp = 10
                 print("Giliran Musuhnya Menyerang Dengan Light Beam " +
-                    str(enemyhitskill1) + " Kerusakan ")
+                      str(enemyhitskill1) + " Kerusakan ")
                 time.sleep(3)
                 HP -= enemyhitskill1
                 enemyMP -= enemyhitskill1mp
@@ -77,7 +104,7 @@ while enemyHP > 0:
                 enemyhitskill2 = 35
                 enemyhitskill2mp = 20
                 print("Giliran Musuhnya Menyerang Dengan Speed of Light " +
-                    str(enemyhitskill2) + " Kerusakan ")
+                      str(enemyhitskill2) + " Kerusakan ")
                 time.sleep(3)
                 HP -= enemyhitskill2
                 enemyMP -= enemyhitskill2mp
@@ -87,16 +114,24 @@ while enemyHP > 0:
                 enemyhitskill3 = 200
                 enemyhitskill3mp = 150
                 print("Giliran Musuhnya Menyerang Dengan Haki " +
-                    str(enemyhitskill3) + " Kerusakan ")
+                      str(enemyhitskill3) + " Kerusakan ")
                 time.sleep(3)
-                HP -=  enemyhitskill3
+                HP -= enemyhitskill3
                 enemyMP -= enemyhitskill3mp
                 print("Sisa Nyawa " + name + " " + str(HP)+"HP")
                 time.sleep(3)
+            elif A == 4:
+                asd = input("Masukkan nomor skill : ")
+                substring = {'nomor': asd, 'nama': list(
+                    range(1, 3)), 'kerusakan': 30}
+                x = list(map(cari, skill, [substring]*len(skill)))
+                list(map(tampil, skill, x))
+                ss = kerusakan(skill, substring['nomor'])
+                ss()
 
         # time.sleep(2)
         Hits = random.randint(1, 4)
-        #HERO ATTACK
+        # HERO ATTACK
         if HP <= 0:
             print("\nkarna kekuatan kizaru yang begitu kuat")
             time.sleep(5)
@@ -116,31 +151,32 @@ while enemyHP > 0:
                     MP -= hit
                     dmgKizaru.append(hit)
                     print(name + " Menyerang Mengakibatkan " +
-                        str(hit) + " Kerusakan")
+                          str(hit) + " Kerusakan")
                     time.sleep(3)
                     enemyHP -= hit
-                    print("hero" , HP,  MP)
+                    print("hero", HP,  MP)
                     if enemyHP < 0:
                         enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                        " Dan MP Admiral Kizaru " + str(enemyMP))
+                          " Dan MP Admiral Kizaru " + str(enemyMP))
                     time.sleep(2)
-                else :
-                    print("Karena MP Rendah, Luffy menyerang dengan Basic Attack dan memulihkan MP")
+                else:
+                    print(
+                        "Karena MP Rendah, Luffy menyerang dengan Basic Attack dan memulihkan MP")
                     time.sleep(3)
                     hit = 10
                     MP += 20
                     dmgKizaru.append(hit)
                     print(name + " Menyerang Mengakibatkan " +
-                        str(hit) + " Kerusakan")
+                          str(hit) + " Kerusakan")
                     time.sleep(3)
                     enemyHP -= hit
-                    print("hero" , HP,  MP)
+                    print("hero", HP,  MP)
                     time.sleep(3)
                     if enemyHP < 0:
                         enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                        " Dan MP Admiral Kizaru " + str(enemyMP))
+                          " Dan MP Admiral Kizaru " + str(enemyMP))
                     time.sleep(2)
             if Hits == 2:
                 if MP >= 90:
@@ -148,32 +184,33 @@ while enemyHP > 0:
                     MP -= hit
                     dmgKizaru.append(hit)
                     print(name + " Menyerang Mengakibatkan " +
-                        str(hit) + " Kerusakan")
+                          str(hit) + " Kerusakan")
                     time.sleep(3)
-                    enemyHP -=  hit
-                    print("hero" , HP,  MP)
+                    enemyHP -= hit
+                    print("hero", HP,  MP)
                     time.sleep(3)
                     if enemyHP < 0:
                         enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                        " Dan MP Admiral Kizaru " + str(enemyMP))
+                          " Dan MP Admiral Kizaru " + str(enemyMP))
                     time.sleep(2)
-                else :
-                    print("Karena MP Rendah, Luffy menyerang dengan Basic Attack dan memulihkan MP")
+                else:
+                    print(
+                        "Karena MP Rendah, Luffy menyerang dengan Basic Attack dan memulihkan MP")
                     time.sleep(3)
                     hit = 10
                     MP += 20
                     dmgKizaru.append(hit)
                     print(name + " Menyerang Mengakibatkan " +
-                        str(hit) + " Kerusakan")
+                          str(hit) + " Kerusakan")
                     time.sleep(3)
                     enemyHP -= hit
-                    print("hero" , HP,  MP)
+                    print("hero", HP,  MP)
                     time.sleep(3)
                     if enemyHP < 0:
                         enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                        " Dan MP Admiral Kizaru " + str(enemyMP))
+                          " Dan MP Admiral Kizaru " + str(enemyMP))
                     time.sleep(2)
             if Hits == 3:
                 if MP >= 100:
@@ -181,32 +218,33 @@ while enemyHP > 0:
                     MP -= hit
                     dmgKizaru.append(hit)
                     print(name + " Menyerang Mengakibatkan " +
-                        str(hit) + " Kerusakan")
+                          str(hit) + " Kerusakan")
                     time.sleep(3)
-                    enemyHP -=  hit
-                    print("hero" , HP,  MP)
+                    enemyHP -= hit
+                    print("hero", HP,  MP)
                     time.sleep(3)
                     if enemyHP < 0:
                         enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                        " Dan MP Admiral Kizaru " + str(enemyMP))
+                          " Dan MP Admiral Kizaru " + str(enemyMP))
                     time.sleep(2)
-                else :
-                    print("Karena MP Rendah, Luffy menyerang dengan Basic Attack dan memulihkan MP")
+                else:
+                    print(
+                        "Karena MP Rendah, Luffy menyerang dengan Basic Attack dan memulihkan MP")
                     time.sleep(3)
                     hit = 10
                     MP += 20
                     dmgKizaru.append(hit)
                     print(name + " Menyerang Mengakibatkan " +
-                        str(hit) + " Kerusakan")
+                          str(hit) + " Kerusakan")
                     time.sleep(3)
                     enemyHP -= hit
-                    print("hero" , HP,  MP)
+                    print("hero", HP,  MP)
                     time.sleep(3)
                     if enemyHP < 0:
                         enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                        " Dan MP Admiral Kizaru " + str(enemyMP))
+                          " Dan MP Admiral Kizaru " + str(enemyMP))
                     time.sleep(2)
             if Hits == 4:
                 if MP >= 200:
@@ -214,32 +252,33 @@ while enemyHP > 0:
                     MP -= hit
                     dmgKizaru.append(hit)
                     print(name + " Menyerang Mengakibatkan " +
-                        str(hit) + " Kerusakan")
+                          str(hit) + " Kerusakan")
                     time.sleep(3)
-                    enemyHP -=  hit
-                    print("hero" , HP,  MP)
+                    enemyHP -= hit
+                    print("hero", HP,  MP)
                     time.sleep(3)
                     if enemyHP < 0:
                         enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                        " Dan MP Admiral Kizaru " + str(enemyMP))
+                          " Dan MP Admiral Kizaru " + str(enemyMP))
                     time.sleep(2)
-                else :
-                    print("Karena MP Rendah, Luffy menyerang dengan Basic Attack dan memulihkan MP")
+                else:
+                    print(
+                        "Karena MP Rendah, Luffy menyerang dengan Basic Attack dan memulihkan MP")
                     time.sleep(3)
                     hit = 10
                     MP += 20
                     dmgKizaru.append(hit)
                     print(name + " Menyerang Mengakibatkan " +
-                        str(hit) + " Kerusakan")
+                          str(hit) + " Kerusakan")
                     time.sleep(3)
                     enemyHP -= hit
-                    print("hero" , HP,  MP)
+                    print("hero", HP,  MP)
                     time.sleep(3)
                     if enemyHP < 0:
                         enemyHP -= enemyHP
                     print("Sisa HP Admiral Kizaru = " + str(enemyHP) +
-                        " Dan MP Admiral Kizaru " + str(enemyMP))
+                          " Dan MP Admiral Kizaru " + str(enemyMP))
                     time.sleep(3)
                     # time.sleep(2)
     else:
