@@ -32,7 +32,7 @@ def enemy2():
     time.sleep(3)
     print("\nAdmiral Kizaru mempunyai skill:")
     time.sleep(3)
-    print(" 1. Light Beam = 10 Kerusakan\n 2. Speed of Light = 20 Kerusakan \n 3. Haki = 30 Kerusakan \n 4. Keterangan")
+    print(" 1. Light Beam\n 2. Speed of Light \n 3. Haki \n 4. Keterangan")
     time.sleep(3)
 
 
