@@ -12,6 +12,23 @@ def Alabasta():
         print (msg)
     return a()
 
+def Dressrosa():
+    msg = "\n**********Selamat Datang di Dressrosa**********"
+    def a():
+        print (msg)
+    return a()
+
+def Sabaody():
+    msg = "\n**********Selamat Datang di Sabaody Island**********"
+    def a():
+        print (msg)
+    return a()
+
+def WholeCake():
+    msg = "\n**********Selamat Datang di Whole Cake Island**********"
+    def a():
+        print (msg)
+    return a()
 def one():
     pygame.mixer.init()
     pygame.mixer.music.load("./Backsound/Luffy Berhasil.mp3")
@@ -64,6 +81,7 @@ def two():
     plt.show()
     time.sleep(3)
     print("Sampailah dia di negeri selanjutnya yaitu Sabaody.")
+    Sabaody()
     time.sleep(6)
     plt.imshow(mpimg.imread("./Pict/Sabaody.jpg"))
     plt.title("Pulau Sabaody")
@@ -117,6 +135,7 @@ def three():
     pygame.mixer.music.load("./Backsound/Doflaminggo.mp3")
     pygame.mixer.music.play(loops=5)
     print("Sampailah Luffy di pulau Dressrosa")
+    Dressrosa()
     time.sleep(3)
     plt.imshow(mpimg.imread("./Pict/dressrosa.jpg"))
     plt.title("Pulau Dressrosa")
@@ -159,6 +178,7 @@ def five():
     plt.title("Whole Cake Island")
     plt.axis('off')
     plt.show()
+    WholeCake()
     time.sleep(5)
     print("Luffy berhasil menyelamatkan temannya.")
     time.sleep(5)
