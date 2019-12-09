@@ -423,7 +423,7 @@ SL.three()
 doffy(heroHP, heroMP)
 dB.doffy(dmgToDoffy)
 SL.four()
-print("1.lanjut\n2.menyelamatkan teman")
+print("1. Pergi ke Negeri Wano\n2. Menyelamatkan teman")
 a = int(input("Jawabanmu : "))
 if a  == 1 :
     print("menuju wano....")
