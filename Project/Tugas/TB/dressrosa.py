@@ -46,6 +46,26 @@ def dofflaminggo(enemyHP, enemyMP):
         else:
             print("Enemy out of MP, can't fight anymore")
             enemyHP -= enemyHP
+    else:
+        print("Dofflaminggo Kalah")
+        print("Dofflaminggopun mencari tau sipa luffy sebenarnya")
+        student = {'nama': 'luffy', 'age': '19',
+                   'status': 'jomblo', 'nama ayah': 'dragon'}
+        # for key in student :
+        #    print (key)
+        print('========================')
+        for key, value in student.items():
+            print(key, value)
+        print("doffy pun mengetahui siapa luffy sebenarnya")
+        # time.sleep(4)
+        print("dia ingin mengetahui berapa jumlah krunya")
+        list_a = [1, 2, 3, 4, 5]
+        # filter object <filter at 0x4e45890>
+        filter_obj = filter(lambda x: x > 4, list_a)
+
+        even_num = list(filter_obj)  # Converts the filer obj to a list
+
+        print("dan jumlah krunya adalah", even_num)
     return dmgSend, enemyMPR, enemyMP, enemyHPR
 
 

@@ -6,6 +6,12 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
+def Alabasta():
+    msg = "\n**********Selamat Datang di negeri alabasta**********"
+    def a():
+        print (msg)
+    return a()
+
 def one():
     pygame.mixer.init()
     pygame.mixer.music.load("./Backsound/Luffy Berhasil.mp3")
@@ -25,6 +31,7 @@ def one():
     plt.show()
     time.sleep(10)
     print("Sampailah mereka di sebuah negeri yang bernama Alabasta")
+    Alabasta()
     time.sleep(5)
     plt.imshow(mpimg.imread("./Pict/Alabasta.jpg"))
     plt.title("Kerajaan Alabasta")
@@ -63,7 +70,7 @@ def two():
     plt.axis('off')
     plt.show()
     pygame.mixer.music.load("./Backsound/Luffy Fighting.mp3")
-    pygame.mixer.music.play(loops = 4)
+    pygame.mixer.music.play(loops = 20)
     time.sleep(10)
     print("Di pulau itu dia mendapat masalah dari Admiral Kizaru dan Pacifista")
     time.sleep(5)

@@ -4,6 +4,8 @@ import time
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
+
+enemy = {'sabody' : 'Pacifista'} #map
 def pacifistaProfile(dmgRecived):
     global enemyHP, enemyMP, dodge
     if dodge == 0:
@@ -32,7 +34,7 @@ def pacifistaProfile(dmgRecived):
 
     if enemyHP <0 : #anti minus HP
         enemyHP -= enemyHP
-    print("Sisa HP Pacifista :", enemyHP, " dan MP Pacifista :", enemyMP)
+    print("Sisa HP ", enemy['sabody'] , enemyHP, " dan MP Pacifista :", enemyMP)
     time.sleep(3)
     return enemyHP, enemyMP
 
