@@ -20,10 +20,12 @@ dmgToPaci = []
 heroHP = 1000
 heroMP = 1500
 
+hero = {'name': 'Luffy'}
+
 
 def pacifista(heroHP, heroMP):  # Pacifista
     global heroDmg
-    if sP.enemyHP > 0 :
+    if sP.enemyHP > 0:
         if heroHP > 0:
             if heroMP > 0:
                 MPs = random.randint(1, 4)
@@ -38,10 +40,11 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         heroHP -= sP.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         pacifista(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         # send dmg to enemy profile
@@ -49,7 +52,7 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         heroHP -= sP.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         pacifista(heroHP, heroMP)
                 elif MPs == 2:
                     if heroMP >= 90:
@@ -62,10 +65,11 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         heroHP -= sP.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         pacifista(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         # send dmg to enemy profile
@@ -73,7 +77,7 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         heroHP -= sP.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         pacifista(heroHP, heroMP)
                 elif MPs == 3:
                     if heroMP >= 100:
@@ -86,10 +90,11 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         heroHP -= sP.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         pacifista(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         # send dmg to enemy profile
@@ -97,7 +102,7 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         heroHP -= sP.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         pacifista(heroHP, heroMP)
                 elif MPs == 4:
                     if heroMP >= 200:
@@ -108,20 +113,21 @@ def pacifista(heroHP, heroMP):  # Pacifista
                         # send dmg to enemy profile
                         sP.pacifistaProfile(heroDmg)
                         heroHP -= sP.dmgSend
-                        if heroHP < 0:                                
+                        if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         pacifista(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         # send dmg to enemy profile
                         sP.pacifistaProfile(heroDmg)
                         heroHP -= sP.dmgSend
-                        if heroHP < 0:                                
+                        if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         pacifista(heroHP, heroMP)
             else:
                 print("hero out of MP, can't fight anymore")
@@ -130,11 +136,13 @@ def pacifista(heroHP, heroMP):  # Pacifista
         else:
             print("hero lose")
             sys.exit(0)
-    else :
-        sP.enemyHP -= sP.enemyHP #Anti Minus
+    else:
+        sP.enemyHP -= sP.enemyHP  # Anti Minus
         print("I win and my HP is", heroHP,
-                    "and my MP is", heroMP)
+              "and my MP is", heroMP)
         time.sleep(3)
+
+
 paci = pacifista
 
 
@@ -155,17 +163,18 @@ def dofflaminggo(heroHP, heroMP):  # Doflaminggo
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         dofflaminggo(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         DS.dofflaminggoProfile(heroDmg)
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         dofflaminggo(heroHP, heroMP)
                 if MPs == 2:
                     if heroMP >= 90:
@@ -178,17 +187,18 @@ def dofflaminggo(heroHP, heroMP):  # Doflaminggo
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         dofflaminggo(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         DS.dofflaminggoProfile(heroDmg)
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         dofflaminggo(heroHP, heroMP)
                 if MPs == 3:
                     if heroMP >= 100:
@@ -201,17 +211,18 @@ def dofflaminggo(heroHP, heroMP):  # Doflaminggo
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         dofflaminggo(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         DS.dofflaminggoProfile(heroDmg)
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         dofflaminggo(heroHP, heroMP)
                 if MPs == 4:
                     if heroMP >= 200:
@@ -224,17 +235,18 @@ def dofflaminggo(heroHP, heroMP):  # Doflaminggo
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         dofflaminggo(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         DS.dofflaminggoProfile(heroDmg)
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         dofflaminggo(heroHP, heroMP)
             else:
                 print("hero out of MP, can't fight anymore")
@@ -243,11 +255,13 @@ def dofflaminggo(heroHP, heroMP):  # Doflaminggo
         else:
             print("hero lose")
             sys.exit(0)
-    else :
+    else:
         DS.enemyHP -= DS.enemyHP
         print("I win and my HP is", heroHP,
-                    "and my MP is", heroMP)
+              "and my MP is", heroMP)
         time.sleep(3)
+
+
 doffy = dofflaminggo
 
 
@@ -269,19 +283,21 @@ def bigMom(heroHP, heroMP):  # bigMOM
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
                             heroHP -= heroHP  # anti minus HP
-                        print("hero", heroHP, heroMP)  # print status hero
+                        # print status hero
+                        print(hero['name'], heroHP, heroMP)
                         # memanggil method hero kembali dengan
                         # status yang sudah di perbaharui
                         bigMom(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         WCI.bogMomProfile(heroDmg)
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         bigMom(heroHP, heroMP)
                 elif MPs == 2:
                     if heroMP >= 90:
@@ -293,19 +309,21 @@ def bigMom(heroHP, heroMP):  # bigMOM
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
                             heroHP -= heroHP  # anti minus HP
-                        print("hero", heroHP, heroMP)  # print status hero
+                        # print status hero
+                        print(hero['name'], heroHP, heroMP)
                         # memanggil method hero kembali dengan
                         # status yang sudah di perbaharui
                         bigMom(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         WCI.bogMomProfile(heroDmg)
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         bigMom(heroHP, heroMP)
                 elif MPs == 3:
                     if heroMP >= 100:
@@ -317,19 +335,21 @@ def bigMom(heroHP, heroMP):  # bigMOM
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
                             heroHP -= heroHP  # anti minus HP
-                        print("hero", heroHP, heroMP)  # print status hero
+                        # print status hero
+                        print(hero['name'], heroHP, heroMP)
                         # memanggil method hero kembali dengan
                         # status yang sudah di perbaharui
                         bigMom(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         WCI.bogMomProfile(heroDmg)
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         bigMom(heroHP, heroMP)
                 elif MPs == 4:
                     if heroMP >= 200:
@@ -341,19 +361,21 @@ def bigMom(heroHP, heroMP):  # bigMOM
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
                             heroHP -= heroHP  # anti minus HP
-                        print("hero", heroHP, heroMP)  # print status hero
+                        # print status hero
+                        print(hero['name'], heroHP, heroMP)
                         # memanggil method hero kembali dengan
                         # status yang sudah di perbaharui
                         bigMom(heroHP, heroMP)
                     else:
-                        print("Because Low MP, hero attack with basic attack and recover MP")
+                        print(
+                            "Because Low MP, hero attack with basic attack and recover MP")
                         heroMP += 20  # menambah MP hero
                         heroDmg = 10
                         WCI.bogMomProfile(heroDmg)
                         heroHP -= DS.dmgSend
                         if heroHP < 0:
                             heroHP -= heroHP
-                        print("hero", heroHP, heroMP)
+                        print(hero['name'], heroHP, heroMP)
                         bigMom(heroHP, heroMP)
                 elif MPs == 5:
                     print("hero attack with basic attack and recover 20 MP")
@@ -364,13 +386,14 @@ def bigMom(heroHP, heroMP):  # bigMOM
                     if WCI.enemyHP <= 0:  # cek dara musuh, jika darah musuh 0 maka selesai
                         WCI.enemyHP -= WCI.enemyHP  # anti minus
                         print("I win and my HP is", heroHP,
-                            "and my MP is", heroMP)
+                              "and my MP is", heroMP)
                         time.sleep(5)
                     elif heroHP > 0:
                         heroHP -= WCI.dmgSend  # mengurangi darah hero
                         if heroHP < 0:
                             heroHP -= heroHP  # anti minus HP
-                        print("hero", heroHP, heroMP)  # print status hero
+                        # print status hero
+                        print(hero['name'], heroHP, heroMP)
                         # memanggil method hero kembali dengan
                         # status yang sudah di perbaharui
                         bigMom(heroHP, heroMP)
@@ -380,11 +403,13 @@ def bigMom(heroHP, heroMP):  # bigMOM
         else:
             print("hero lose")
             sys.exit(0)
-    else :
+    else:
         WCI.enemyHP -= WCI.enemyHP
         print("I win and my HP is", heroHP,
-                    "and my MP is", heroMP)
+              "and my MP is", heroMP)
         time.sleep(3)
+
+
 Mom = bigMom
 
 SL.one()
@@ -392,7 +417,7 @@ import alabasta
 SL.two()
 paci(heroHP, heroMP)
 dB.pacifista(dmgToPaci)
-import sabaodyKizaru
+import sabaodyKizaru 
 SL.two5()
 SL.three()
 doffy(heroHP, heroMP)
